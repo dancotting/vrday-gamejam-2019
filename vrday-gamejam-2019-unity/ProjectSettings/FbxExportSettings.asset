@@ -15,6 +15,7 @@
             "."
         ],
         "fbxSavePaths": [
+            "StaticMeshes",
             "."
         ],
         "selectedFbxPath": 0,
