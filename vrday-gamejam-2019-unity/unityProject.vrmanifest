@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vrdaygamejam2019unity.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Projects\\vrday-gamejam-2019\\vrday-gamejam-2019-unity\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "vrday-gamejam-2019-unity [Testing]"
+        }
+      }
+    }
+  ]
+}
