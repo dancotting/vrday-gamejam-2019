@@ -10,22 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de147e59272614993841bc86fa528246, type: 3}
-  m_Name: 2_TurnUpTheHeat
+  m_Name: 6_TurnUpTheAC
   m_EditorClassIdentifier: 
-  taskIndex: 2
-  taskName: Turn Up The Heat
-  taskDescription: Help, I'm cold!
+  taskIndex: 6
+  taskName: Turn Up the AC
+  taskDescription: It's too hot; I need AC!
   successCriterion: 2
-  taskDifficulty: 0
+  taskDifficulty: 1
   roomIndex: 0
   barAudio:
-    roomAudioClips:
-    - {fileID: 8300000, guid: 408407a5b40ee7045bfd7bcc092dfe4f, type: 3}
-    - {fileID: 8300000, guid: 523088f314bb4fb4a8543b01841c7d8b, type: 3}
-    - {fileID: 8300000, guid: 24ba8b8e227c3fb4589bf80b5c89ba4a, type: 3}
-    - {fileID: 8300000, guid: 1f3c8ead5066cb14eb0cf86694bd04f7, type: 3}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
   poolAudio:
     roomAudioClips: []
   vipAudio:

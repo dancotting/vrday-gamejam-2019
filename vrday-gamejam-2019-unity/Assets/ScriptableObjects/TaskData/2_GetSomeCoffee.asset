@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de147e59272614993841bc86fa528246, type: 3}
-  m_Name: 1_GetSomeFood
+  m_Name: 2_GetSomeCoffee
   m_EditorClassIdentifier: 
-  taskIndex: 1
-  taskName: Get Some Food
-  taskDescription: Help, you need to send me some food!
+  taskIndex: 2
+  taskName: Get Some Coffee
+  taskDescription: I need coffee!
   successCriterion: 0
   taskDifficulty: 2
   roomIndex: 0
