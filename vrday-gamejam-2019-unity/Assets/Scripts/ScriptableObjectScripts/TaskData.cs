@@ -19,7 +19,8 @@ public class TaskData : ScriptableObject
     public RoomSpecificAudio vipAudio;
     public RoomSpecificAudio bedroomAudio;
     public RoomSpecificAudio engineRoomAudio;
-    public RoomSpecificAudio casinoAudio; 
+    public RoomSpecificAudio casinoAudio;
+    public RoomSpecificAudio steeringAudio;
 }
 
 public enum TaskDifficulty
