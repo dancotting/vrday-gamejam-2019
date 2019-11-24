@@ -44,18 +44,11 @@ public class TaskManager : Singleton<TaskManager>
         }
     }
 
-    public void GenerateBarTask(int barIndex)
+    public void GenerateNewTask(int roomIndex)
     {
-        AddTaskToActive(availableTasks[0], barIndex);
-        debugUI.SetActive(true);
-
-    }
-
-    public void GeneratePoolTask(int poolIndex)
-    {
-        Debug.Log("GENERATING POOL INDEX");
-        AddTaskToActive(availableTasks[0], poolIndex);
-
+        //AddTaskToActive(GetRelevantTask(0), roomIndex);
+        int randomIndex = Random.Range(0, availableTasks.Count);
+        AddTaskToActive(availableTasks[randomIndex], roomIndex);
     }
 
     public void CheckForSuccess(SuccessCriterion successAttempt)
@@ -71,6 +64,20 @@ public class TaskManager : Singleton<TaskManager>
             
         }
     }
+
+    // TODO Look to get tasks based on weight system/user performance
+
+    //public TaskData GetRelevantTask(int taskWeight)
+    //{
+    //    TaskData td;
+    //    td = availableTasks[taskWeight];
+    //    return td;
+    //}
+
+
+
+    // DEBUG METHODS
+    // TODO Remove before deployment
 
     public void SuccessTestFood()
     {
@@ -94,5 +101,19 @@ public class TaskManager : Singleton<TaskManager>
     {
         Debug.Log("PRESSED Power BUTTON");
         CheckForSuccess(SuccessCriterion.Power);
+    }
+
+    public void GenerateBarTask(int barIndex)
+    {
+        AddTaskToActive(availableTasks[0], barIndex);
+        debugUI.SetActive(true);
+
+    }
+
+    public void GeneratePoolTask(int poolIndex)
+    {
+        AddTaskToActive(availableTasks[0], poolIndex);
+        debugUI.SetActive(true);
+
     }
 }

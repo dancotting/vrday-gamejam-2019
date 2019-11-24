@@ -1,24 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Room : MonoBehaviour
 {
-    public RoomEvent addNewTaskEvent;
-    public List<Task> activeTasks = new List<Task>();
+    public Image roomStatusIndicator;
+    public Button roomAckButton;
+    public GameObject taskMonitorPrefab;
+    public Transform taskMonitorParent;
+    public List<GameObject> taskStatusMonitors = new List<GameObject>();
 
-    //public void AddNewTask()
-    //{
-    //    addNewTaskEvent.Raise();
-    //}
-
-    public void AddTaskToActive(Task task)
+    public void AddTaskMonitor()
     {
-        activeTasks.Add(task);
+        GameObject taskMonitor = Instantiate(taskMonitorPrefab, taskMonitorParent);
+        taskStatusMonitors.Add(taskMonitor);
+
     }
-
-
 
     public enum RoomMood
     {

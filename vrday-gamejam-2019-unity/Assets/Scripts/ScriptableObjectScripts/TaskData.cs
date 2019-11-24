@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New_Task_Data", menuName = "BoatLuv/CreateNewTaskData", order = 0)]
+[CreateAssetMenu(fileName = "n_New_Task_Data", menuName = "BoatLuv/CreateNewTaskData", order = 0)]
 public class TaskData : ScriptableObject
 {
     public int taskIndex;
@@ -9,6 +9,7 @@ public class TaskData : ScriptableObject
     public string taskDescription;
     public SuccessCriterion successCriterion;
     public TaskDifficulty taskDifficulty;
+    [HideInInspector]
     public int roomIndex;
 
     //public List<RoomSpecificTaskData> roomSpecificData = new List<RoomSpecificTaskData>();
