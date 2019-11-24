@@ -16,7 +16,7 @@ MonoBehaviour:
   taskName: Zero
   taskDescription: Help, you need to send me some food!
   successCriterion: 0
-  taskDifficulty: 1
+  taskDifficulty: 36
   roomIndex: 0
   barAudio:
     roomAudioClips:

@@ -32,12 +32,12 @@ public class Task : MonoBehaviour
 
     public IEnumerator Counter()
     {
-        while(taskTime < 1f)
+        while (taskTime < 1f)
         {
             TaskTime += Time.deltaTime / taskDuration;
             yield return null;
         }
-
+        FailState();
         yield break;
     }
 
@@ -50,38 +50,22 @@ public class Task : MonoBehaviour
 
     private void TaskStatusChangeHandler(TaskEscalation newStatus)
     {
-        if (audioRefs.TryGetValue(newStatus, out AudioClip clip))
-        {
-            AudioManager.Instance.masterAudio.PlayOneShot(clip);
-        }
+        PlayTaskAudio();
+    }
+
+    private void FailState()
+    {
+        SessionManager.Instance.failedTasks++;
+        TaskManager.Instance.DestroyActiveTask(thisTaskData);
     }
 
     public void SetTaskData(TaskData taskData)
     {
         thisTaskData = taskData;
+        taskDuration = (float)thisTaskData.taskDifficulty;
         GetAudio();
-        SetDuration(thisTaskData);
         StartCoroutine(Counter());
-        //AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.patientAudio);
-    }
-
-    private void SetDuration(TaskData taskData)
-    {
-        switch (taskData.taskDifficulty)
-        {
-            case TaskDifficulty.Easy:
-                taskDuration = 60f;
-                break;
-            case TaskDifficulty.Medium:
-                taskDuration = 45f;
-                break;
-            case TaskDifficulty.Hard:
-                taskDuration = 30f;
-                break;
-            case TaskDifficulty.Insane:
-                taskDuration = 15f;
-                break;
-        }
+        PlayTaskAudio();
     }
 
     private void GetAudio()
@@ -104,20 +88,28 @@ public class Task : MonoBehaviour
 
     private void SetAudioRefs(List<AudioClip> clips)
     {
-        for(int i = 0; i < clips.Count; i++)
+        for (int i = 0; i < clips.Count; i++)
         {
             audioRefs.Add((TaskEscalation)i, clips[i]);
         }
     }
 
+    private void PlayTaskAudio()
+    {
+        if (audioRefs.TryGetValue(taskStatus, out AudioClip clip))
+        {
+            AudioManager.Instance.masterAudio.PlayOneShot(clip);
+        }
+    }
+
     private int taskStatusCount;
-    private TaskEscalation taskStatus = (TaskEscalation)(-1);
+    private TaskEscalation taskStatus = TaskEscalation.LevelOne;
     public TaskEscalation TaskStatus
     {
         get { return taskStatus; }
         set
         {
-            if (taskStatus == value) return;
+            if (taskStatus == value || value < 0) return;
             taskStatus = value;
             OnTaskStatusChange?.Invoke(taskStatus);
         }
