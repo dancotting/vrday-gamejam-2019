@@ -1,0 +1,1 @@
+﻿using System.Collections;using System.Collections.Generic;using UnityEngine;public class SuctionCollider: MonoBehaviour{    private void OnTriggerEnter(Collider other)    {        if(other.gameObject.tag == "TaskObject")        {            Destroy(other.gameObject);        }    }}

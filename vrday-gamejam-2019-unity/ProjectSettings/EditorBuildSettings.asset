@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/1_OnLoad.unity
     guid: 97279744b7f174303b67fea035e68a8c
   - enabled: 1
+    path: Assets/Scenes/3_Bridge.unity
+    guid: a3d67748ecb08794896dd8d6a08d17a9
+  - enabled: 1
     path: Assets/Scenes/2_Home.unity
     guid: a959d665c821442a8bd7f93ae49d4337
   m_configObjects: {}
