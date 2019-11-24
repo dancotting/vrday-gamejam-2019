@@ -17,12 +17,14 @@ public class TaskManager : Singleton<TaskManager>
         if (!activeTasks.ContainsKey(taskData.taskIndex))
         {
             activeTasks.Add(taskData.taskIndex, CreateNewTask(taskData));
+            SessionManager.Instance.currentActiveTasks = activeTasks.Count;
         }
     }
 
     public void RemoveTaskFromActive(TaskData taskData)
     {
         activeTasks.Remove(taskData.taskIndex);
+        SessionManager.Instance.currentActiveTasks = activeTasks.Count;
     }
     // Create and destroy the actual task gameobjects
 
@@ -57,6 +59,7 @@ public class TaskManager : Singleton<TaskManager>
         {
             if(successAttempt == go.GetComponent<Task>().thisTaskData.successCriterion)
             {
+                SessionManager.Instance.completedTasks++;
                 DestroyActiveTask(go.GetComponent<Task>().thisTaskData);
                 break;
             }

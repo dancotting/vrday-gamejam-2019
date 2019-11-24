@@ -16,29 +16,23 @@ MonoBehaviour:
   taskName: Zero
   taskDescription: Help, you need to send me some food!
   successCriterion: 0
-  taskDifficulty: 1
+  taskDifficulty: 36
   roomIndex: 0
   barAudio:
-    patientAudio: {fileID: 8300000, guid: e4444278effa041bd92500960b067cfd, type: 3}
-    annoyedAudio: {fileID: 8300000, guid: 1292ab8b82cda49919e4089f171de4ae, type: 3}
-    irateAudio: {fileID: 8300000, guid: f224686121e2d4159a49bbe21bdd8ca1, type: 3}
+    roomAudioClips:
+    - {fileID: 8300000, guid: 408407a5b40ee7045bfd7bcc092dfe4f, type: 3}
+    - {fileID: 8300000, guid: 684adebb2b1d7634faf98e2e269fe2ad, type: 3}
+    - {fileID: 8300000, guid: 6c4f0df741bf4af4b809f0839ddcc085, type: 3}
+    - {fileID: 8300000, guid: fe4ef2b79c318c3449de5072e33fec1b, type: 3}
+    - {fileID: 8300000, guid: 24ba8b8e227c3fb4589bf80b5c89ba4a, type: 3}
+    - {fileID: 8300000, guid: 4ef9ab3c4fd53e94486043f7499fcbbb, type: 3}
   poolAudio:
-    patientAudio: {fileID: 8300000, guid: 6a1e663d3bbae410ea335a5ec0e54a32, type: 3}
-    annoyedAudio: {fileID: 8300000, guid: 628aa5e14afb047ae8be595c7210bde1, type: 3}
-    irateAudio: {fileID: 8300000, guid: e6b00e906c1724723945826d744ab12d, type: 3}
+    roomAudioClips: []
   vipAudio:
-    patientAudio: {fileID: 0}
-    annoyedAudio: {fileID: 0}
-    irateAudio: {fileID: 0}
+    roomAudioClips: []
   bedroomAudio:
-    patientAudio: {fileID: 0}
-    annoyedAudio: {fileID: 0}
-    irateAudio: {fileID: 0}
+    roomAudioClips: []
   engineRoomAudio:
-    patientAudio: {fileID: 0}
-    annoyedAudio: {fileID: 0}
-    irateAudio: {fileID: 0}
+    roomAudioClips: []
   casinoAudio:
-    patientAudio: {fileID: 0}
-    annoyedAudio: {fileID: 0}
-    irateAudio: {fileID: 0}
+    roomAudioClips: []
