@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44192ef006a745ee90059efdd804b59, type: 3}
+  m_Name: 2_Pool
+  m_EditorClassIdentifier: 
+  roomName: Pool
+  thisRoomClip: {fileID: 8300000, guid: 50bfc58ec2bd2467a810985e8eac6e3b, type: 3}
