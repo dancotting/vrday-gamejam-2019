@@ -18,6 +18,7 @@ public class Task : MonoBehaviour
         }
 
         AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.annoyedAudio);
+        Debug.LogWarning("PLAYING ANNOYED AUDIO");
 
         while (taskTime > .33f && taskTime < .66f)
         {
@@ -26,6 +27,7 @@ public class Task : MonoBehaviour
         }
 
         AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.irateAudio);
+        Debug.LogWarning("PLAYING IRATE AUDIO");
 
         while (taskTime > .66f && taskTime < 1f)
         {

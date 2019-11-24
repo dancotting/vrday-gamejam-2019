@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de147e59272614993841bc86fa528246, type: 3}
+  m_Name: 12_FixThePower
+  m_EditorClassIdentifier: 
+  taskIndex: 12
+  taskName: Fix The Power
+  taskDescription: Help, the power in my room is out!
+  successCriterion: 3
+  taskDifficulty: 0
+  roomIndex: 0
+  barAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  poolAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  vipAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  bedroomAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  engineRoomAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  casinoAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
