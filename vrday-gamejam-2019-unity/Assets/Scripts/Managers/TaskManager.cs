@@ -58,7 +58,6 @@ public class TaskManager : Singleton<TaskManager>
             if(successAttempt == go.GetComponent<Task>().thisTaskData.successCriterion)
             {
                 DestroyActiveTask(go.GetComponent<Task>().thisTaskData);
-                Debug.Log("SUCCESS");
                 break;
             }
             
