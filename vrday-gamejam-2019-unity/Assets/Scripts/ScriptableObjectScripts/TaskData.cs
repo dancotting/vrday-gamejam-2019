@@ -7,6 +7,7 @@ public class TaskData : ScriptableObject
     public int taskIndex;
     public string taskName;
     public string taskDescription;
+    public SuccessCriterion successCriterion;
     public TaskDifficulty taskDifficulty;
     public int roomIndex;
 
@@ -26,4 +27,15 @@ public enum TaskDifficulty
     Medium,
     Hard,
     Insane
+}
+
+public enum SuccessCriterion
+{
+    Food,
+    WaterTemp,
+    AirTemp,
+    Power,
+    WaterLevel,
+    Fire,
+    SteeringWheel
 }

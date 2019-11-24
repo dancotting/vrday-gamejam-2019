@@ -4,9 +4,9 @@ using UnityEngine;
 public class Task : MonoBehaviour
 {
     public TaskData thisTaskData;
-    public Room roomAssignment;
     public float taskDuration;
     public float taskTime = 0f;
+    public bool isTaskComplete = false;
     public RoomSpecificAudio thisTaskAudio;
 
     public IEnumerator Counter()
@@ -17,7 +17,7 @@ public class Task : MonoBehaviour
             yield return null;
         }
 
-        PlayAudio(thisTaskAudio.annoyedAudio);
+        AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.annoyedAudio);
 
         while (taskTime > .33f && taskTime < .66f)
         {
@@ -25,7 +25,7 @@ public class Task : MonoBehaviour
             yield return null;
         }
 
-        PlayAudio(thisTaskAudio.irateAudio);
+        AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.irateAudio);
 
         while (taskTime > .66f && taskTime < 1f)
         {
@@ -47,13 +47,7 @@ public class Task : MonoBehaviour
         GetAudio();
         SetDuration(thisTaskData);
         StartCoroutine(Counter());
-        PlayAudio(thisTaskAudio.patientAudio);
-    }
-
-    private void PlayAudio(AudioClip clip)
-    {
-        AudioManager.Instance.masterAudio.PlayOneShot(clip);
-        Debug.Log(clip.name);
+        AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.patientAudio);
     }
 
     private void SetDuration(TaskData taskData)
