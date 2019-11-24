@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de147e59272614993841bc86fa528246, type: 3}
+  m_Name: 1_GetSomeFood
+  m_EditorClassIdentifier: 
+  taskIndex: 0
+  taskName: Zero
+  taskDescription: Help, you need to send me some food!
+  taskDifficulty: 1
+  roomIndex: 0
+  barAudio:
+    patientAudio: {fileID: 8300000, guid: e4444278effa041bd92500960b067cfd, type: 3}
+    annoyedAudio: {fileID: 8300000, guid: 1292ab8b82cda49919e4089f171de4ae, type: 3}
+    irateAudio: {fileID: 8300000, guid: f224686121e2d4159a49bbe21bdd8ca1, type: 3}
+  poolAudio:
+    patientAudio: {fileID: 8300000, guid: 6a1e663d3bbae410ea335a5ec0e54a32, type: 3}
+    annoyedAudio: {fileID: 8300000, guid: 628aa5e14afb047ae8be595c7210bde1, type: 3}
+    irateAudio: {fileID: 8300000, guid: e6b00e906c1724723945826d744ab12d, type: 3}
+  vipAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  bedroomAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  engineRoomAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
+  casinoAudio:
+    patientAudio: {fileID: 0}
+    annoyedAudio: {fileID: 0}
+    irateAudio: {fileID: 0}
