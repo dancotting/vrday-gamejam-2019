@@ -44,6 +44,20 @@ public class TaskManager : Singleton<TaskManager>
         }
     }
 
+    public void GenerateNewTask(int roomIndex)
+    {
+        //AddTaskToActive(GetRelevantTask(0), roomIndex);
+        int randomIndex = Random.Range(0, availableTasks.Count);
+        AddTaskToActive(availableTasks[randomIndex], roomIndex);
+    }
+
+    public TaskData GetRelevantTask(int taskWeight)
+    {
+        TaskData td;
+        td = availableTasks[taskWeight];
+        return td;
+    }
+
     public void GenerateBarTask(int barIndex)
     {
         AddTaskToActive(availableTasks[0], barIndex);
