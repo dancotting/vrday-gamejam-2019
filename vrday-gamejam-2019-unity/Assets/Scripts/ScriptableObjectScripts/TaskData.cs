@@ -24,10 +24,10 @@ public class TaskData : ScriptableObject
 
 public enum TaskDifficulty
 {
-    Easy,
-    Medium,
-    Hard,
-    Insane
+    Easy = 60,
+    Medium = 54,
+    Hard = 42,
+    Insane = 36
 }
 
 public enum SuccessCriterion
