@@ -19,7 +19,13 @@ MonoBehaviour:
   taskDifficulty: 0
   roomIndex: 0
   barAudio:
-    roomAudioClips: []
+    roomAudioClips:
+    - {fileID: 8300000, guid: 8730a1fd6dcb81c4a9a255844320c423, type: 3}
+    - {fileID: 8300000, guid: 165cca630db5aa040821f738de5df5c5, type: 3}
+    - {fileID: 8300000, guid: f9e272a6e8349fb4a8283a9528f965b5, type: 3}
+    - {fileID: 8300000, guid: 8587cc9f911cad34b8b99a849c2ed3b9, type: 3}
+    - {fileID: 8300000, guid: c0092950e8d5df248bf0496d4769482b, type: 3}
+    - {fileID: 8300000, guid: 61adbbb867520b24c9663b4dd2e76749, type: 3}
   poolAudio:
     roomAudioClips: []
   vipAudio:
@@ -29,4 +35,6 @@ MonoBehaviour:
   engineRoomAudio:
     roomAudioClips: []
   casinoAudio:
+    roomAudioClips: []
+  steeringAudio:
     roomAudioClips: []

@@ -19,7 +19,13 @@ MonoBehaviour:
   taskDifficulty: 1
   roomIndex: 0
   barAudio:
-    roomAudioClips: []
+    roomAudioClips:
+    - {fileID: 8300000, guid: 646196048c4f0db46880b62e2071b129, type: 3}
+    - {fileID: 8300000, guid: e3d0e1b95cc8f6640884e119dc4beff4, type: 3}
+    - {fileID: 8300000, guid: 1ba9190310adf6c4ab266a562aef57f4, type: 3}
+    - {fileID: 8300000, guid: cdb7a738dfbcf2b4c88da0c16be6f2e0, type: 3}
+    - {fileID: 8300000, guid: 935f7e6f7fdf08f4cbe4d75820f99beb, type: 3}
+    - {fileID: 8300000, guid: 5f55211e136f7e642ba4f04b61706183, type: 3}
   poolAudio:
     roomAudioClips: []
   vipAudio:
