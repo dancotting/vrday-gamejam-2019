@@ -1,46 +1,58 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Task : MonoBehaviour
 {
     public TaskData thisTaskData;
     public float taskDuration;
-    public float taskTime = 0f;
     public bool isTaskComplete = false;
     public RoomSpecificAudio thisTaskAudio;
+    public Dictionary<TaskEscalation, AudioClip> audioRefs = new Dictionary<TaskEscalation, AudioClip>();
 
-    public IEnumerator Counter()
+    public delegate void OnTaskStatusChangeDelegate(TaskEscalation newStatus);
+    public event OnTaskStatusChangeDelegate OnTaskStatusChange;
+
+    public delegate void OnTaskTimeChangeDelegate(float newVal);
+    public event OnTaskTimeChangeDelegate OnTaskTimeChange;
+
+    private void TaskTimeChangeHandler(float newVal)
     {
-        while(taskTime < .33f)
-        {
-            taskTime += Time.deltaTime / taskDuration;
-            yield return null;
-        }
+        int roundedTime = Mathf.RoundToInt(newVal * taskStatusCount) -1;
+        if (taskStatus == (TaskEscalation)roundedTime) return;
+        TaskStatus = (TaskEscalation)roundedTime;
+    }
 
-        AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.annoyedAudio);
-        Debug.LogWarning("PLAYING ANNOYED AUDIO");
+    private void TaskStatusChangeHandler(TaskEscalation newStatus)
+    {
+        //Debug.Log(newStatus);
+        //AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.annoyedAudio);
+    }
 
-        while (taskTime > .33f && taskTime < .66f)
-        {
-            taskTime += Time.deltaTime / taskDuration;
-            yield return null;
-        }
-
-        AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.irateAudio);
-        Debug.LogWarning("PLAYING IRATE AUDIO");
-
-        while (taskTime > .66f && taskTime < 1f)
-        {
-            taskTime += Time.deltaTime / taskDuration;
-            yield return null;
-        }
-        TaskManager.Instance.DestroyActiveTask(thisTaskData);
-        yield break;
+    private void OnEnable()
+    {
+        OnTaskTimeChange += TaskTimeChangeHandler;
+        OnTaskStatusChange += TaskStatusChangeHandler;
+        taskStatusCount = System.Enum.GetNames(typeof(TaskEscalation)).Length;
     }
 
     private void OnDisable()
     {
         StopAllCoroutines();
+        OnTaskTimeChange -= TaskTimeChangeHandler;
+        OnTaskStatusChange -= TaskStatusChangeHandler;
+    }
+
+
+    public IEnumerator Counter()
+    {
+        while(taskTime < 1f)
+        {
+            TaskTime += Time.deltaTime / taskDuration;
+            yield return null;
+        }
+
+        yield break;
     }
 
     public void SetTaskData(TaskData taskData)
@@ -49,7 +61,7 @@ public class Task : MonoBehaviour
         GetAudio();
         SetDuration(thisTaskData);
         StartCoroutine(Counter());
-        AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.patientAudio);
+        //AudioManager.Instance.masterAudio.PlayOneShot(thisTaskAudio.patientAudio);
     }
 
     private void SetDuration(TaskData taskData)
@@ -86,4 +98,31 @@ public class Task : MonoBehaviour
                 break;
         }
     }
+
+    private int taskStatusCount;
+    private TaskEscalation taskStatus = (TaskEscalation)(-1);
+    public TaskEscalation TaskStatus
+    {
+        get { return taskStatus; }
+        set
+        {
+            if (taskStatus == value) return;
+            taskStatus = value;
+            OnTaskStatusChange?.Invoke(taskStatus);
+        }
+    }
+
+    private float taskTime = 0;
+    public float TaskTime
+    {
+        get { return taskTime; }
+        set
+        {
+            if (System.Math.Abs(taskTime - value) <= System.Math.Abs(taskTime * .0001f)) return;
+            taskTime = value;
+            OnTaskTimeChange?.Invoke(taskTime);
+        }
+    }
 }
+
+

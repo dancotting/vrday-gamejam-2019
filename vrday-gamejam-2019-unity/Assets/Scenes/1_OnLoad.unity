@@ -154,17 +154,7 @@ MonoBehaviour:
     type: 3}
   availableTasks:
   - {fileID: 11400000, guid: a054fdef9ade84618a7b311d41b61055, type: 2}
-  - {fileID: 11400000, guid: 39a7c6713b2b848aaae0fc8b57897942, type: 2}
-  - {fileID: 11400000, guid: 4abc4ce1ee1fa44239e63dc5ea904686, type: 2}
-  - {fileID: 11400000, guid: 162389bb2aa7b4466ac1f234066fc9f4, type: 2}
-  - {fileID: 11400000, guid: 80246a419f2794eb5a7f29bd6c5ed151, type: 2}
-  - {fileID: 11400000, guid: 4e713d695af4c4a08a98097f7bf8833d, type: 2}
-  - {fileID: 11400000, guid: 5603af2e935a4490a9211fcda7c8dc05, type: 2}
-  - {fileID: 11400000, guid: 13b655c44c6ff4985808d02b3561dcfe, type: 2}
-  - {fileID: 11400000, guid: 1fc8b2ce4d1a64a25a63b45344e50934, type: 2}
-  - {fileID: 11400000, guid: fe71527f4e6f149b6842c9fd4ef70199, type: 2}
-  - {fileID: 11400000, guid: bb0e81c4a15324860bd0892b4373b232, type: 2}
-  - {fileID: 11400000, guid: fe71527f4e6f149b6842c9fd4ef70199, type: 2}
+  - {fileID: 11400000, guid: 51aa7d252e3a248a780f785efea74bbf, type: 2}
 --- !u!4 &71204241
 Transform:
   m_ObjectHideFlags: 0
@@ -388,6 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549468570}
+  - component: {fileID: 549468571}
   m_Layer: 0
   m_Name: DebugObjects
   m_TagString: Untagged
@@ -412,6 +403,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &549468571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549468569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a79ba8a11a804f20817832bab53c129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &560844530
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +746,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1324152673}
   - component: {fileID: 1324152675}
-  - component: {fileID: 1324152674}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -766,33 +768,6 @@ Transform:
   m_Father: {fileID: 1994744688}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1324152674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324152671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f102894f75a9d4c41945b66d5a792b73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomEvent: {fileID: 11400000, guid: e74ead56698d04c509e12805ba705747, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 71204240}
-        m_MethodName: AddTaskToActive
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Task, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1324152675
 MonoBehaviour:
   m_ObjectHideFlags: 0

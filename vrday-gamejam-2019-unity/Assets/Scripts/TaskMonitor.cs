@@ -25,8 +25,19 @@ public class TaskMonitor : MonoBehaviour
     {
         if (taskToMonitor)
         {
-            progressContainer.sizeDelta = new Vector2(taskToMonitor.taskTime * maxWidth, 0);
+            progressContainer.sizeDelta = new Vector2(taskToMonitor.TaskTime * maxWidth, 0);
         }
         
     }
+}
+
+public enum TaskEscalation
+{
+    LevelOne,
+    LevelTwo,
+    LevelThree,
+    LevelFour,
+    LevelFive,
+    LevelSix,
+    TaskFailure
 }

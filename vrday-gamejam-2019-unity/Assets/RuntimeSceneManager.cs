@@ -8,8 +8,7 @@ public class RuntimeSceneManager : MonoBehaviour
 
     void Start()
     {
-        LoadThisScene(1);
-        
+        LoadThisScene(1);        
     }
 
     public void LoadThisScene(int sceneIndex)
