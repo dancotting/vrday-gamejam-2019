@@ -19,50 +19,16 @@ MonoBehaviour:
   taskDifficulty: 1
   roomIndex: 0
   barAudio:
-    roomAudioClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
   poolAudio:
-    roomAudioClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
   vipAudio:
-    roomAudioClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
   bedroomAudio:
-    roomAudioClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
   engineRoomAudio:
-    roomAudioClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
   casinoAudio:
-    roomAudioClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    roomAudioClips: []
+  steeringAudio:
+    roomAudioClips: []
